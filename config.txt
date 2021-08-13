@@ -1,0 +1,32 @@
+# Saadaksesi lisää vaihtoehtoja ja lisätietoa, katso seuraava linkki
+# http://rpf.io/configtxt
+# Jotkin asetukset voivat vaikuttaa laitteen toimivuuteen. Katso yllä oleva
+# linkki lisätietoja varten
+
+# valitse jos kuvaa ei tule
+#hdmi_safe=1
+#disable_overscan=1
+
+# valitse pakottaaksesi HDMI-tila DVIn tilalle. Tämä voi myös auttaa ääntä
+# toimimaan DMT (tietokone näyttö) tiloissa
+#hdmi_drive=2
+
+# valitse saadaksesi composiitti PAL
+#sdtv_mode=2
+
+# valitse ylikellotaaksesi. VOI AIHEUTTAA PYSYVIÄ VAURIOITA!
+#arm_freq=800
+
+# valitse infrapuna kommunikointia varten
+#dtoverlay=gpio-ir,gpio_pin=17
+#dtoverlay=gpio-ir-tx,gpio_pin=18
+
+# kommentoi estääksesi ääni
+dtparam=audio=on
+
+[pi4]
+dtoverlay=vc4-fkms-v3d
+max_framebuffers=2
+
+[all]
+#dtoverlay=vc4-fkms-v3d
